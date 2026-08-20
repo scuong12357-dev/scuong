@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuongs Website</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #07111f, #123b5d);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 25px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,.4);
+      backdrop-filter: blur(15px);
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      margin: auto;
+      border-radius: 50%;
+      background: linear-gradient(135deg,#00d9ff,#0066ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: bold;
+      box-shadow: 0 0 30px #00bfff;
+    }
+
+    h1 {
+      margin-top: 15px;
+      font-size: 28px;
+    }
+
+    .subtitle {
+      margin: 8px 0 25px;
+      color: #b9d8e8;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    button {
+      border: none;
+      padding: 15px;
+      border-radius: 14px;
+      background: linear-gradient(90deg,#008cff,#00c8ff);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: .25s;
+    }
+
+    button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px #00aeff;
+    }
+
+    .status {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 12px;
+      background: rgba(0,0,0,.25);
+      color: #8fe8ff;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #9bb8c7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo">C</div>
+
+    <h1>CUONGS WEBSITE</h1>
+    <p class="subtitle">Welcome to my website</p>
+
+    <div class="menu">
+      <button onclick="showMessage('Trang chủ')">
+        🏠 TRANG CHỦ
+      </button>
+
+      <button onclick="showMessage('Dịch vụ')">
+        ⚡ DỊCH VỤ
+      </button>
+
+      <button onclick="showMessage('Bảng giá')">
+        💎 BẢNG GIÁ
+      </button>
+
+      <button onclick="showMessage('Liên hệ')">
+        📞 LIÊN HỆ
+      </button>
+    </div>
+
+    <div class="status" id="status">
+      ● Hệ thống đang hoạt động
+    </div>
+
+    <footer>
+      © 2026 Cuongs Website
+    </footer>
+
+  </div>
+
+  <script>
+    function showMessage(name) {
+      document.getElementById("status").innerText =
+        "✓ Bạn đã chọn: " + name;
+    }
+  </script>
+
+</body>
+</html>
